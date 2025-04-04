@@ -65,12 +65,12 @@ client.on(Events.MessageCreate, async (message) => {
 
         const sorted = Object.entries(leaderboard)
             .sort(([, a], [, b]) => b - a)
-            .map(([user, count], index) => `${index + 1}. ${user} — ${count} win(s)`)
+            .map(([user, count], index) => `${index + 1}. ${user} — ${count} green slips`)
             .join("\n");
         
         
         message.channel.send({
-            content: sorted.length ? `🏆 **Cash Winners Leaderboard** 🏆\n\n${sorted}` : "No image entries in the last month.",
+            content: sorted.length ? `🏆 **Cash Winners Leaderboard** 🏆\n\n${sorted}` : "No green slips in the last month.",
         })
 
     }
